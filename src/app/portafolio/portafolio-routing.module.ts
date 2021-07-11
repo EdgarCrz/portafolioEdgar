@@ -9,8 +9,9 @@ import { InfoSitioComponent } from './pages/info-sitio/info-sitio.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+
     children: [
+      { path: '', component: HomeComponent },
       { path: 'tecnologias', component: MisHerramientasComponent },
       { path: 'personal', component: PersonalComponent },
       { path: 'contacto', component: ContactoComponent },

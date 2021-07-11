@@ -7,7 +7,6 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { InfoSitioComponent } from './pages/info-sitio/info-sitio.component';
 import { MisHerramientasComponent } from './pages/mis-herramientas/mis-herramientas.component';
 import { PersonalComponent } from './pages/personal/personal.component';
-import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +16,6 @@ import { MaterialModule } from '../material/material.module';
     MisHerramientasComponent,
     PersonalComponent,
   ],
-  imports: [CommonModule, PortafolioRoutingModule, MaterialModule],
+  imports: [CommonModule, PortafolioRoutingModule],
 })
 export class PortafolioModule {}
