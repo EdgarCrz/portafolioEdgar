@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
+/* Analizar bien que elementos voy a trabajar con rem ya que va a ser de manera global */
+
+/* Escritorio */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* tablet */
+@media (max-width: 834px) {
+  html {
+    font-size: 16px;
+  }
+}
+/* Movile */
+@media (max-width: 428px) {
+  html {
+    /* font-size: 16px; */
+  }
+}
+
+.linkActive {
+  color: rgb(255, 92, 85);
+}

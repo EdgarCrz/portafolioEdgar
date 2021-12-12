@@ -19,7 +19,12 @@
       <a routerLink="./personal" mat-list-item><span>Quien soy</span></a>
       <a routerLink="./contacto" mat-list-item><span>Contactame</span></a>
       <a routerLink="./entrañas" mat-list-item><span>Este sitio</span></a> -->
-      <a *ngFor="let item of menuItems" [routerLink]="[item.ruta]" mat-list-item
+      <a
+        routerLinkActive="active"
+        *ngFor="let item of menuItems"
+        [routerLink]="[item.ruta]"
+        mat-list-item
+        (click)="sidenav.toggle()"
         ><span>{{ item.nombre }}</span></a
       >
       <!-- se redujeron 4 lineas a 1, obviamente puedo borrarlas, pero comentarlas me ayuda en mi aprendizaje -->
@@ -29,10 +34,22 @@
   <mat-toolbar>
     <mat-toolbar-row>
       <span>Edgar Cruz</span>
-      <span class="example-spacer"></span>
+      <!-- Menu desktop -->
+      <nav mat-tab-nav-bar class="navbar-desktop">
+        <a
+          mat-tab-link
+          *ngFor="let item of menuItems"
+          [routerLink]="[item.ruta]"
+          routerLinkActive="linkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ item.nombre }}</a
+        >
+      </nav>
+
+      <!-- <span class="example-spacer"></span> -->
       <button
         mat-icon-button
-        class="example-icon"
+        class="example-icon burguer-btn"
         aria-label="Example icon-button with menu icon"
         (click)="sidenav.toggle()"
       >
