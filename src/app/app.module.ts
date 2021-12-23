@@ -1,4 +1,4 @@
-import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './shared/menu/menu.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent],
+  declarations: [AppComponent, MenuComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -17,7 +18,5 @@ import { MenuComponent } from './shared/menu/menu.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  // schemas: [NO_ERRORS_SCHEMA]
-  
 })
 export class AppModule {}

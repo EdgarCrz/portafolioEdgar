@@ -9,6 +9,9 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+h3 {
+  margin-bottom: 0px;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
 /* Analizar bien que elementos voy a trabajar con rem ya que va a ser de manera global */
@@ -37,3 +40,8 @@ body {
 .linkActive {
   color: rgb(255, 92, 85);
 }
+
+/* .contenedor__caja{
+  max-width:1920px;
+
+} */

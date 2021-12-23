@@ -7,34 +7,7 @@ interface MenuItem {
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styles: [
-    `
-      .example-spacer {
-        flex: 1 1 auto;
-      }
-      .burguer-btn {
-        visibility: hidden;
-      }
-      .mat-toolbar-row {
-        justify-content: space-between;
-      }
-      .mat-tab-nav-bar {
-        border-bottom: none;
-      }
-      a:hover {
-        color: white;
-      }
-
-      @media screen and (max-width: 834px) {
-        .burguer-btn {
-          visibility: visible;
-        }
-        .navbar-desktop {
-          display: none;
-        }
-      }
-    `,
-  ],
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent {
   menuItems: MenuItem[] = [

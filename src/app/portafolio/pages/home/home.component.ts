@@ -1,48 +1,13 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+// import {TimelineModule} from 'primeng/timeline';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls:['./home.component.css'],
   
-  styles: [
-    `
-      .contenedor-presentacion {
-        display: grid;
-
-        height: 100%;
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-columns: 50% 50%;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .zIndex{
-        z-index:100;
-      }
-      .contenedor-img {
-        display: flex;
-        margin-top: 20px;
-        justify-content: end;
-      }
-      .contenedor-titulos {
-        display: flex;
-        flex-direction: column;
-      }
-      .img {
-        /* border-radius: 100%; */
-        width: 60%;
-        /* clip-path: ellipse(50% 50% at 50% 50%); */
-      }
-
-      .contenedor-presentacion h1 {
-        color: rgb(255, 92, 85);
-      }
-      .contenedor-presentacion h3 {
-        font-family: 'Roboto';
-        font-weight: 900;
-      }
-    `,
-  ],
+  
 })
 export class HomeComponent implements OnInit {
   myStyle: object = {};
@@ -54,9 +19,9 @@ export class HomeComponent implements OnInit {
     this.myStyle = {
       position: 'fixed',
       width: '100%',
-      height: '100%',
+      height: '92%',
       'z-index': -1,
-      top: 0,
+      top: 10,
       left: 0,
       right: 0,
       bottom: 0,
@@ -135,11 +100,11 @@ export class HomeComponent implements OnInit {
         detect_on: 'canvas',
         events: {
           onhover: {
-            enable: false,
-            mode: 'grab',
+            enable: true,
+            mode: 'repulse',
           },
           onclick: {
-            enable: true,
+            enable: false,
             mode: 'repulse',
           },
           resize: true,
@@ -159,7 +124,7 @@ export class HomeComponent implements OnInit {
             speed: 3,
           },
           repulse: {
-            distance: 400,
+            distance: 150,
             duration: 0.4,
           },
           push: {

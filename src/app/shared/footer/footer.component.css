@@ -1,0 +1,62 @@
+footer {
+  background-color: #212121;
+  width: 100%;
+  height: 15.5rem;
+}
+.footerGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  /* justify-items: center; */
+  /* justify-content: center; */
+}
+.footer__grid1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__grid2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /* background: #414141; */
+}
+.footer__grid3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background: #414141; */
+}
+.hr {
+  width: 80%;
+  justify-self: center;
+  margin: 0;
+}
+.iconos__container {
+  display: flex;
+  justify-content: space-between;
+  width: 9.375rem;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bi-whatsapp,
+.bi-linkedin,
+.bi-github,
+.bi-instagram,
+.bi-envelope-plus,
+.bi-telephone {
+  color: #ca3e47;
+  font-size: 1.875rem;
+}
+
+@media screen and (max-width: 834px) {
+  h3,
+  label {
+    display: none;
+  }
+  
+}

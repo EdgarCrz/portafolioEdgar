@@ -1,25 +1,22 @@
-
-
-<div class="contenedor-presentacion" (scroll)="scrollEfect($event)">
+<div class="contenedor-presentacion">
   <div class="contenedor-img">
-    <img class="img" src="assets/img/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg" />
+    <img
+      class="img"
+      src="assets/img/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg"
+    />
   </div>
   <div class="contenedor-titulos">
     <div>
       <h3>Hola soy Edgar Cruz</h3>
       <h1>Frontend Developer</h1>
+      <p>Hola soy edgar cruz</p>
     </div>
-    
+    <particles
+      [params]="myParams"
+      [style]="myStyle"
+      [width]="width"
+      [height]="height"
+    >
+    </particles>
   </div>
 </div>
-<particles 
-[params]="myParams"
-[style]="myStyle"
-[width]="width"
-[height]="height"
->
-</particles>
-
-
-
-
