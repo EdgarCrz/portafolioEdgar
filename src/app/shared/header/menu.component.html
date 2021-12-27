@@ -1,6 +1,7 @@
 <!-- <p>home works!</p> -->
 <mat-sidenav-container fullscreen>
   <mat-sidenav #sidenav>
+    <!-- Menu movil -->
     <mat-toolbar>
       <button
         mat-icon-button
@@ -12,13 +13,6 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <!-- <a routerLink="" mat-list-item><span>Home</span></a>
-      <a routerLink="./tecnologias" mat-list-item
-        ><span>Mis Herramientas</span></a
-      >
-      <a routerLink="./personal" mat-list-item><span>Quien soy</span></a>
-      <a routerLink="./contacto" mat-list-item><span>Contactame</span></a>
-      <a routerLink="./entrañas" mat-list-item><span>Este sitio</span></a> -->
       <a
         routerLinkActive="active"
         *ngFor="let item of menuItems"
@@ -30,7 +24,7 @@
       <!-- se redujeron 4 lineas a 1, obviamente puedo borrarlas, pero comentarlas me ayuda en mi aprendizaje -->
     </mat-nav-list>
   </mat-sidenav>
-
+  <!-- Menu -->
   <mat-toolbar>
     <mat-toolbar-row>
       <span>Edgar Cruz</span>
@@ -57,10 +51,14 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <router-outlet></router-outlet>
+  <!-- aui -->
+
+  <!-- Este footer no deberia de ir aqui -->
+  <div class="contenido__presentacion">
+    <router-outlet ></router-outlet>
+  </div>
+
   <app-footer></app-footer>
 </mat-sidenav-container>
-
-
 
 <!-- VAS A IMPLEMENTAR EL MENU DE HAMBURGUESITA  -->

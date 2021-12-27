@@ -1,4 +1,8 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PortafolioRoutingModule } from './portafolio-routing.module';
@@ -7,7 +11,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { InfoSitioComponent } from './pages/info-sitio/info-sitio.component';
 import { MisHerramientasComponent } from './pages/mis-herramientas/mis-herramientas.component';
 import { PersonalComponent } from './pages/personal/personal.component';
-import { ParticlesModule } from 'angular-particle';
+import { NgParticlesModule } from 'ng-particles';
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -17,12 +23,14 @@ import { ParticlesModule } from 'angular-particle';
     MisHerramientasComponent,
     PersonalComponent,
   ],
-  imports: [CommonModule, PortafolioRoutingModule, ParticlesModule],
-  exports: [ParticlesModule],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-    NO_ERRORS_SCHEMA
-  ]
-  
+  imports: [
+    CommonModule,
+    PortafolioRoutingModule,
+    NgParticlesModule,
+    TimelineModule,
+    CardModule,
+  ],
+
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class PortafolioModule {}

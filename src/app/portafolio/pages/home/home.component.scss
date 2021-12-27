@@ -1,0 +1,76 @@
+.contenedor-presentacion {
+  display: grid;
+
+  height: 100%;
+  grid-template-columns: 50% 50%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zIndex {
+  z-index: 100;
+}
+.contenedor-img {
+  display: flex;
+  margin-top: 20px;
+  justify-content: end;
+}
+.contenedor-titulos {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  width: 60%;
+}
+
+.contenedor-presentacion h1 {
+  color: #ca3e47;
+}
+.contenedor-presentacion h3 {
+  font-family: "Roboto";
+  font-weight: 900;
+}
+
+.custom-marker {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
+}
+.p-timeline-event-connector {
+  background: #ca3e47;
+}
+
+::ng-deep {
+  .p-timeline-event-content,
+  .p-timeline-event-opposite {
+    line-height: 1;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+  ::ng-deep {
+    .customized-timeline {
+      .p-timeline-event:nth-child(even) {
+        flex-direction: row !important;
+
+        .p-timeline-event-content {
+          text-align: left !important;
+        }
+      }
+
+      .p-timeline-event-opposite {
+        flex: 0;
+      }
+
+      .p-card {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
