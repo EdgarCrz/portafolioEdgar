@@ -1,9 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 html,
 body {
   height: 100%;
-  font-size: 16px;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -18,23 +21,23 @@ h3 {
 /* Escritorio */
 
 /* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 14px;
-  }
-}
+// @media (max-width: 1366px) {
+//   html {
+//     font-size: 14px;
+//   }
+// }
 /* tablet */
-@media (max-width: 834px) {
-  html {
-    font-size: 16px;
-  }
-}
+// @media (max-width: 834px) {
+//   html {
+//     font-size: 16px;
+//   }
+// }
 /* Movile */
-@media (max-width: 428px) {
-  html {
-    /* font-size: 16px; */
-  }
-}
+// @media (max-width: 428px) {
+//   html {
+//     /* font-size: 16px; */
+//   }
+// }
 
 .linkActive {
   color: rgb(255, 92, 85);

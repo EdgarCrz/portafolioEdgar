@@ -1,18 +1,61 @@
-<div class="contenedor-presentacion">
-  <div class="contenedor-img">
-    <img
-      class="img"
-      src="assets/img/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg"
-    />
-  </div>
-  <div class="contenedor-titulos">
-    <div>
-      <h3>Hola soy Edgar Cruz</h3>
-
-      <h1>Frontend Developer</h1>
-      <p>Hola soy edgar</p>
+<!-- este div tiene 100% -->
+<div class="contenedor-presentacion flex flex-col justify-center">
+  <div class="h-11/12 flex flex-col 2xl:flex-row justify-center items-center">
+    <!-- IMG -->
+    <div class="h-4/6 2xl:w-1/2 flex justify-center items-center">
+      <img
+        class="sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 2xl:w-5/12"
+        src="assets/img/perfil2.jpg"
+      />
+    </div>
+    <!-- Informacion personal -->
+    <div class="h-2/6 2xl:w-1/2 flex justify-start items-center">
+      <div class="flex flex-col sm:text-center 2xl:text-left">
+        <h3>Hola soy Edgar Cruz</h3>
+        <h1 class="sm:text-3xl 2xl:text-6xl">Desarrollador Web</h1>
+        <p>Hola soy edgar</p>
+      </div>
     </div>
   </div>
+  <!-- Flecha -->
+  <div class="h-1/12 flex items-start">
+    <i class="bi bi-arrow-down-circle-fill text-xl"></i>
+  </div>
+</div>
+<div name="timeLine" class="mt-12 bg-red-500">
+  <p-timeline
+    class=""
+    [value]="events1"
+    align="alternate"
+    styleClass="customized-timeline"
+  >
+    <ng-template pTemplate="marker" let-event>
+      <span
+        class="custom-marker p-shadow-2"
+        [style.backgroundColor]="event.color"
+      >
+        <i [ngClass]="event.icon"></i>
+      </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+      <p-card [header]="event.status" [subheader]="event.date">
+        <img
+          *ngIf="event.image"
+          [src]="'assets/showcase/images/demo/product/' + event.image"
+          [alt]="event.name"
+          width="200"
+          class="p-shadow-2"
+        />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
+          consequuntur error repudiandae numquam deserunt quisquam repellat libero
+          asperiores earum nam nobis, culpa ratione quam perferendis esse,
+          cupiditate neque quas!
+        </p>
+        <button pButton label="Read more" class="p-button-text"></button>
+      </p-card>
+    </ng-template>
+  </p-timeline>
 </div>
 <ng-particles
   [id]="id"
@@ -20,31 +63,3 @@
   (particlesLoaded)="particlesLoaded($event)"
   (particlesInit)="particlesInit($event)"
 ></ng-particles>
-<p-timeline [value]="events1" align="alternate">
-  <ng-template pTemplate="marker" let-event>
-    <span
-      class="custom-marker p-shadow-2"
-      [style.backgroundColor]="event.color"
-    >
-      <i [ngClass]="event.icon"></i>
-    </span>
-  </ng-template>
-  <ng-template pTemplate="content" let-event>
-    <p-card [header]="event.status" [subheader]="event.date">
-      <img
-        *ngIf="event.image"
-        [src]="'assets/showcase/images/demo/product/' + event.image"
-        [alt]="event.name"
-        width="200"
-        class="p-shadow-2"
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed
-        consequuntur error repudiandae numquam deserunt quisquam repellat libero
-        asperiores earum nam nobis, culpa ratione quam perferendis esse,
-        cupiditate neque quas!
-      </p>
-      <button pButton label="Read more" class="p-button-text"></button>
-    </p-card>
-  </ng-template>
-</p-timeline>
