@@ -1,0 +1,61 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$my-primary-color: (
+  200: #cc00ff,
+  500: #e68f1e,
+  700: #fff235,
+  // ... continues to 900
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      // ... continues to 900
+    ),
+);
+$my-accent-color: (
+  200: #2bff00,
+  500: #d2e61e,
+  700: #5a35ff,
+  // ... continues to 900
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      // ... continues to 900
+    ),
+);
+$my-warn-color: (
+  200: #00aeff,
+  500: #e61e1e,
+  700: #ff35bc,
+  // ... continues to 900
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      // ... continues to 900
+    ),
+);
+
+$my-palette-primary: mat-palette($my-primary-color);
+$my-palette-accent: mat-palette($my-accent-color);
+$my-palette-warn: mat-palette($my-warn-color);
+
+$my-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $my-palette-primary,
+      accent: $my-palette-accent,
+      warn: $my-palette-warn,
+    ),
+  )
+);
+
+@include angular-material-theme($my-theme);

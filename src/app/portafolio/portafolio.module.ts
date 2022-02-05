@@ -14,6 +14,8 @@ import { PersonalComponent } from './pages/personal/personal.component';
 import { NgParticlesModule } from 'ng-particles';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { MaterialModule } from '../material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { CardModule } from 'primeng/card';
     NgParticlesModule,
     TimelineModule,
     CardModule,
+    MaterialModule
+   
   ],
 
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

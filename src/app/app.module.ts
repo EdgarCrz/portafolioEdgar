@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     BrowserAnimationsModule,
     MaterialModule,
   ],
+  // exports:[MaterialModule],
   providers: [],
   bootstrap: [AppComponent],
 })

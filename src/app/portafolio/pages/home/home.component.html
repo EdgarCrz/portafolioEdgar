@@ -12,19 +12,20 @@
     <div class="h-2/6 2xl:w-1/2 flex justify-start items-center">
       <div class="flex flex-col sm:text-center 2xl:text-left">
         <h3>Hola soy Edgar Cruz</h3>
-        <h1 class="sm:text-3xl 2xl:text-6xl">Desarrollador Web</h1>
+        <h1 class="sm:text-3xl 2xl:text-6xl">Desarrollador Webc</h1>
         <p>Hola soy edgar</p>
+        
       </div>
     </div>
   </div>
   <!-- Flecha -->
   <div class="h-1/12 flex items-start">
-    <i class="bi bi-arrow-down-circle-fill text-xl"></i>
+    <a class="animate-pulse" href="#timeLine"><i class="bi bi-arrow-down-circle-fill text-xl "></i></a>
   </div>
 </div>
-<div name="timeLine" class="mt-12 bg-red-500">
+<div id="timeLine"  class="mt-12 bg-red-500">
   <p-timeline
-    class=""
+    class="duration-1000"
     [value]="events1"
     align="alternate"
     styleClass="customized-timeline"
