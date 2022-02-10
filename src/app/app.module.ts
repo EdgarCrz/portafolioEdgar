@@ -8,6 +8,11 @@ import { MaterialModule } from './material/material.module';
 import { MenuComponent } from './shared/header/menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
+
+
+
+
+
 @NgModule({
   declarations: [AppComponent, MenuComponent, FooterComponent],
   imports: [
@@ -15,6 +20,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+   
   ],
   // exports:[MaterialModule],
   providers: [],

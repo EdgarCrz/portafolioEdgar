@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Container, Main } from 'tsparticles';
-
+import {} from '@angular/router';
 import { PrimeIcons } from 'primeng/api';
 
 @Component({
@@ -10,6 +10,18 @@ import { PrimeIcons } from 'primeng/api';
 })
 export class HomeComponent implements OnInit {
   id = 'tsparticles';
+
+  constructor() {}
+  descargarPdf() {
+    
+  }
+  scrollToElement(element: HTMLElement): void {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
 
   // Propiedades de nuestras particles
   particlesOptions: any = {
@@ -134,6 +146,4 @@ export class HomeComponent implements OnInit {
       },
     ];
   }
-
- 
 }

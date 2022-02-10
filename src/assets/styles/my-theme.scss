@@ -1,6 +1,10 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
+
+$custom-background-color: map_get($mat-blue-grey, 50);
+
+
 $my-primary-color: (
   200: #cc00ff,
   500: #e68f1e,
@@ -43,10 +47,12 @@ $my-warn-color: (
       // ... continues to 900
     ),
 );
+$custom-background-color: #7fc962;
 
 $my-palette-primary: mat-palette($my-primary-color);
 $my-palette-accent: mat-palette($my-accent-color);
 $my-palette-warn: mat-palette($my-warn-color);
+// $my-palette-background:  mat-palette($custom-background-color);
 
 $my-theme: mat-dark-theme(
   (
@@ -54,8 +60,12 @@ $my-theme: mat-dark-theme(
       primary: $my-palette-primary,
       accent: $my-palette-accent,
       warn: $my-palette-warn,
+      // background: $my-background,
+      
     ),
+   
   )
 );
+
 
 @include angular-material-theme($my-theme);
